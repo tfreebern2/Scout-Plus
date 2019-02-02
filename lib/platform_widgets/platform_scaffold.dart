@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:scout_plus/widgets/platform_app_bar.dart';
-import 'package:scout_plus/widgets/platform_widget.dart';
+import 'package:scout_plus/platform_widgets/platform_app_bar.dart';
+import 'package:scout_plus/platform_widgets/platform_widget.dart';
 
 
 class PlatformScaffold extends PlatformWidget<CupertinoPageScaffold, Scaffold> {

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:scout_plus/widgets/platform_widget.dart';
+import 'package:scout_plus/platform_widgets/platform_widget.dart';
 
 class PlatformButton extends PlatformWidget<CupertinoButton, FlatButton> {
   PlatformButton({Key key, this.child, this.color, this.onPressed, this.padding}) : super(key: key);

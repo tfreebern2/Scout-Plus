@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:scout_plus/widgets/platform_widget.dart';
+import 'package:scout_plus/platform_widgets/platform_widget.dart';
 
 class PlatformSwitch extends PlatformWidget<CupertinoSwitch, Switch> {
   PlatformSwitch({Key key, this.value, this.onChanged}) : super(key: key);

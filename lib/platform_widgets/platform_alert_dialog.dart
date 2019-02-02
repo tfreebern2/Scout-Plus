@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:scout_plus/widgets/platform_widget.dart';
+import 'package:scout_plus/platform_widgets/platform_widget.dart';
 
 
 class PlatformAlertDialog extends PlatformWidget<CupertinoAlertDialog, AlertDialog> {
