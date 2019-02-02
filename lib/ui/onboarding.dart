@@ -11,7 +11,9 @@ class Onboarding extends StatefulWidget {
 class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: _buildWelcome(), resizeToAvoidBottomPadding: false);
+    return Scaffold(
+        body: _buildWelcome(),
+        resizeToAvoidBottomPadding: false);
   }
 
   Widget _buildWelcome() {
