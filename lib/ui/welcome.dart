@@ -29,69 +29,84 @@ class Welcome extends StatelessWidget {
   }
 
   Widget buildContents(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return ListView(
       children: <Widget>[
-        Center(
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              'Welcome to Scout Plus!',
-              style: TextStyle(color: Colors.white, fontSize: 32.0),
-            ),
-          ),
-        ),
-        SizedBox(height: 20.0),
-        Center(
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              'Just getting started? Let\'s take a look at some of the great features of Scout Plus.',
-              style: TextStyle(color: Colors.white, fontSize: 16.0),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ),
-        SizedBox(height: 80.0),
-        Container(
-          width: 300.0,
-          height: 300.0,
-          decoration: BoxDecoration(color: Colors.grey),
-        ),
-        SizedBox(height: 50.0,),
-        Row(
+        SizedBox(height: 100.0,),
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: 40.0,
-                height: 40.0,
-                decoration: BoxDecoration(color: Colors.white, shape: BoxShape.circle),
-                child: Icon(Icons.navigate_next, color: Colors.blue[800], size: 36.0),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'Welcome to Scout Plus!',
+                  style: TextStyle(color: Colors.white, fontSize: 32.0),
+                ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: 40.0,
-                height: 40.0,
-                decoration: BoxDecoration(color: Colors.white, shape: BoxShape.circle),
-                child: Icon(Icons.navigate_next, color: Colors.blue[800], size: 36.0),
+            SizedBox(height: 20.0),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'Just getting started? Let\'s take a look at some of the great features of Scout Plus.',
+                  style: TextStyle(color: Colors.white, fontSize: 16.0),
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: 40.0,
-                height: 40.0,
-                decoration: BoxDecoration(color: Colors.white, shape: BoxShape.circle),
-                child: Icon(Icons.navigate_next, color: Colors.blue[800], size: 36.0),
-              ),
-            )
+            SizedBox(height: 80.0),
+            Container(
+              width: 300.0,
+              height: 300.0,
+              decoration: BoxDecoration(color: Colors.grey),
+            ),
+            SizedBox(
+              height: 50.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GestureDetector(
+                    onTap: () => print('First'),
+                    child: Container(
+                      width: 40.0,
+                      height: 40.0,
+                      decoration: BoxDecoration(
+                          color: Colors.white, shape: BoxShape.circle),
+                      child: Icon(Icons.navigate_next,
+                          color: Colors.blue[800], size: 36.0),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: 40.0,
+                    height: 40.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white, shape: BoxShape.circle),
+                    child: Icon(Icons.navigate_next,
+                        color: Colors.blue[800], size: 36.0),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: 40.0,
+                    height: 40.0,
+                    decoration: BoxDecoration(
+                        color: Colors.white, shape: BoxShape.circle),
+                    child: Icon(Icons.navigate_next,
+                        color: Colors.blue[800], size: 36.0),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
-
       ],
     );
   }
