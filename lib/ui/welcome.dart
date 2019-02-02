@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
+import '../utils/strings.dart' as string;
 
-class Welcome extends StatelessWidget {
+class Welcome extends StatefulWidget {
+  Welcome({Key key}) : super(key: key);
+
+  @override
+  WelcomeState createState() {
+    return new WelcomeState();
+  }
+}
+
+class WelcomeState extends State<Welcome> {
+  String _welcomeHeaderText;
+  String _welcomeText;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -9,20 +22,20 @@ class Welcome extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               stops: [
-            0.1,
-            0.3,
-            0.5,
-            0.7,
-            0.9,
-            1.0
-          ],
+                0.1,
+                0.3,
+                0.5,
+                0.7,
+                0.9,
+                1.0
+              ],
               colors: [
-            Colors.blue[600],
-            Colors.blue[700],
-            Colors.blue[800],
-            Colors.black54,
-            Colors.black87,
-            Colors.black
+                Colors.blue[600],
+                Colors.blue[700],
+                Colors.blue[800],
+                Colors.black54,
+                Colors.black87,
+                Colors.black
           ])),
       child: buildContents(context),
     );
@@ -39,8 +52,8 @@ class Welcome extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Welcome to Scout Plus!',
-                  style: TextStyle(color: Colors.white, fontSize: 32.0),
+                string.header,
+                style: TextStyle(color: Colors.white, fontSize: 32.0),
                 ),
               ),
             ),
@@ -49,7 +62,7 @@ class Welcome extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'Just getting started? Let\'s take a look at some of the great features of Scout Plus.',
+                  string.subHeader,
                   style: TextStyle(color: Colors.white, fontSize: 16.0),
                   textAlign: TextAlign.center,
                 ),
@@ -70,7 +83,12 @@ class Welcome extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
-                    onTap: () => print('First'),
+                    onTap: () {
+                      setState(() {
+                        string.header = string.firstFeature;
+                        string.subHeader = string.firstFeatureSub;
+                      });
+                    },
                     child: Container(
                       width: 40.0,
                       height: 40.0,
