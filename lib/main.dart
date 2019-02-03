@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scout_plus/ui/onboarding.dart';
+import 'package:scout_plus/onboarding_process/onboarding.dart';
 
 void main() => runApp(Landing());
 
